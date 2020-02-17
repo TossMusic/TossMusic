@@ -10,10 +10,12 @@ const playlistSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
-    }
-}, {
-    timestamps: true
-});
+    },
+    genre: String,
+},
+    {
+        timestamps: true
+    });
 
 const Playlist = mongoose.model('Playlist', playlistSchema);
 module.exports = Playlist;
