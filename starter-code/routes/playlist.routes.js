@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
     const { name, genre } = req.body
 
     Playlist.create({ name, genre })
-        .then(() => res.redirect('/profile'))
+        .then(() => res.redirect('/playlist'))
         .catch(err => console.log("hay un error en el post de playlist routes", err))
 }
 
