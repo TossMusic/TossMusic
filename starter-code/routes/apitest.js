@@ -1,20 +1,11 @@
-//prueba test api
+const express = require('express');
+const router = express.Router();
+   const JamendoApiHandler = require('../services/APIHandler')
+   const JamendoApi = new JamendoApiHandler()
 
-// router.get("/apitest", (req, res) => {
-//   const result = {}
-//   const JamendoApiHandler = require('../services/APIHandler')
-//   const JamendoApi = new JamendoApiHandler()
+router.get("/", (req, res) => {
 
-//   JamendoApi.getFullAlbums()
-
-//   res.json(result)
-// })
-
-router.get("/apitest", (req, res) => {
-    const JamendoApiHandler = require('../services/APIHandler')
-    const JamendoApi = new JamendoApiHandler()
-
-    JamendoApi.getFullTracks()
+    JamendoApi.getFullAlbums()
         .then(result => {
             res.json(result)
         })
@@ -23,3 +14,22 @@ router.get("/apitest", (req, res) => {
     search en vez de res.json hay que usar res.render para que 
     se pinte en el hbs*/
 })
+
+router.get('/albums', (req, res) => {
+    //searchtext vendra de req.body
+    const genres = req.query.genres
+ 
+    JamendoApi.search(searchText, genres)
+        .then(result => {
+            console.log(result)
+        })
+
+})
+
+module.exports = router
+
+
+/*en app.js
+  const search = require('./routes/search.routes');
+  app.use('/search', search)+/
+module.exports = router*/
