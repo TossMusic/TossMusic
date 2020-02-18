@@ -26,8 +26,17 @@ class JamendoApi {
       .catch(err => console.log("error en getFullTracks", err))
   };
 
+  search(searchText, genres) {
+    this.API.get(`albums/?client_id=${process.env.client_id}&tags=${genres}`)
+      .then(res => {
+        // console.log(res.data.results)
+        return res.data.results
+      })
+      .catch(err => console.log("error en search", err))
+  }
+
   //   getTracksByGenre(genres) {
-  //    this.API.get(`tracks/?client_id=${process.env.client_id}={{genres}}`)  rock se pasaría por parametro cuando 
+  //    this.API.get(`tracks/?client_id=${process.env.client_id}&tags={{genres}}`)  rock se pasaría por parametro cuando 
   //tengamos el filtro en la plantilla del search, pasandoselo a esta función
 
 }
