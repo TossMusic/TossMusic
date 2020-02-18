@@ -27,7 +27,7 @@ class JamendoApi {
   };
 
   //   getTracksByGenre(genres) {
-  //    this.API.get(`tracks/?client_id=ae3ce9b7&tags={{genres}}`)  rock se pasaría por parametro cuando 
+  //    this.API.get(`tracks/?client_id=${process.env.client_id}={{genres}}`)  rock se pasaría por parametro cuando 
   //tengamos el filtro en la plantilla del search, pasandoselo a esta función
 
 }
