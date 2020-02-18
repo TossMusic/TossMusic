@@ -5,4 +5,9 @@ body {
 a {
   color: #00B7FF; }
 
+.navPrincipal {
+  border-bottom: 3px black solid;
+  display: flex;
+  justify-content: space-between; }
+
 /*# sourceMappingURL=style.css.map */
