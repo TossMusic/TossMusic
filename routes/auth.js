@@ -51,7 +51,7 @@ router.post("/signup", (req, res, next) => {
     const newUser = new User({
       username,
       password: hashPass,
-      avatar
+      avatar: `https://robohash.org/${username}.png?set=set4`
     });
 
     newUser.save()
