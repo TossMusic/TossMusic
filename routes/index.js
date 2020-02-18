@@ -9,10 +9,11 @@ router.get('/', (req, res, next) => {
   if (req.user === undefined) {
     res.render('index');
   } else {
-    res.render('search-album');
+    const genres = ["lounge", "classical", "electronic", "jazz", "pop", "hiphop", "relaxation", "rock", "songwriter", "world", "metal", "soundtrack"]
+    res.render("search-album", { genres })
   }
-}); 
 
+});
 router.post('/', (req, res, next) => {
   JamendoApi.search(searchText, genres)
     .then(result => {
