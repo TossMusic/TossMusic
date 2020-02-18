@@ -5,20 +5,38 @@
   <form action="/" method="POST" id="form-container">
     <label for="searchMusic"></label>
     <input type="text" name="search" class="form-control" id="searchMusic" placeholder="Search your music">
+
     <br>
 
     <label for="searchGenre"></label>
     <select name="searchGenre" class="form-control" id="searchGenre" placeholder="Search the genre">
-      <option>Search genre</option>
+      <option value="Search genre">Search genre</option>
       {{#each genres}}
-      <option>{{this}}</option>
+      <option {{bindAttr value="this"}}>{{this}}</option>
       {{/each}}
+    </select>
+    <button type="submit">Buscar</button>
+  </form>
+
+  <br><br>
+
+  <br><br>
+
+  <a href="/profile">Back to Your Profile</a>
+
+  <br><br><br><br>
+
+  {{#if result}}
+
+  {{#each result}}
+  <div>
+    <img src={{this.album_image}} width="150px">
+    <div>{{this.name}}</div>
+    <div>{{this.artist_name}}</div>
+  </div>
+  <br><br>
+  {{/each}}
+
+  {{/if}}
 
 </div>
-<button>Buscar</button>
-
-<br><br>
-
-<br><br>
-<a href="/profile">Back to Your Profile</a>
-</form>
