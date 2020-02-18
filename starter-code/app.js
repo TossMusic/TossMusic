@@ -28,8 +28,9 @@ app.use('/auth', authRoutes);
 
 const profile = require('./routes/profile.routes');
 app.use('/profile', profile);
-
-const playlistRoutes = require('./routes/playlist.routes');
+const playlistRoutes= require('./routes/playlist.routes');
 app.use('/playlist', playlistRoutes);
+
+
 
 module.exports = app;

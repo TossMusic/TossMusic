@@ -9,19 +9,12 @@ const Playlist = require('../models/Playlist.model')
 router.get('/', (req, res) => res.render('playlist/playlist-form'))
 router.post('/', (req, res) => {
 
-        const {
-            name,
-            genre
-        } = req.body
+    const { name, genre } = req.body
 
-        Playlist.create({
-                name,
-                genre,
-                userId: req.user._id
-            })
-            .then(() => res.redirect('/playlist'))
-            .catch(err => console.log("hay un error en el post de playlist routes", err))
-    }
+    Playlist.create({ name, genre })
+        .then(() => res.redirect('/playlist'))
+        .catch(err => console.log("hay un error en el post de playlist routes", err))
+}
 
 
 )

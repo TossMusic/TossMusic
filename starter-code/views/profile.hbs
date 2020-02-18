@@ -3,15 +3,3 @@
 <p>{{user.username}}</p>
 <br>
 <img src="https://robohash.org/{{user._id}}.png?set=set4" alt="avatar">
-
-<h3>My Playlists</h3>
-{{#each playlists}}
-{{name}}
-{{/each}}
-
-<br>
-<a href="/playlist">Create a new Playlist</a>
-
-{{!-- se incluye el acceso a crear playlist así aunque podriamos
-incluirlo en la navbar y escoderla con un if de que solo la 
-vean si esta logueada --}}
