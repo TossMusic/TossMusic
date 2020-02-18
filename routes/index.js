@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport')
-const Songs = require('../models/Song.model')
+const JamendoApiHandler = require('../services/APIHandler')
+const JamendoApi = new JamendoApiHandler()
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -14,15 +15,15 @@ router.get('/', (req, res, next) => {
 
 });
 
-// router.post('/', (req, res, next) => {
-//   Songs.find()
-//     .then(result => {
-//       console.log(result)
-//       res.render()
-//     })
+router.post('/', (req, res, next) => {
+  JamendoApi.search()
+    .then(result => {
+      console.log(result)
+      res.render()
+    })
 
-// }
-//)
+}
+)
 
 
 module.exports = router;
