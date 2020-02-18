@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
   } else {
     res.render('search-album');
   }
-});
+}); 
 
 router.post('/', (req, res, next) => {
   JamendoApi.search(searchText, genres)
