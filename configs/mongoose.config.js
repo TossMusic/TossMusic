@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose
-    .connect('mongodb://localhost/TossMusic', {
+    .connect(`${process.env.DB_REMOTE}`, {
         useNewUrlParser: true
     })
     .then(x => {

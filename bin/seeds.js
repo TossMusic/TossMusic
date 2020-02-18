@@ -11,7 +11,7 @@ const Song = require("../models/Song.model");
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/TossMusic', {
+  .connect((`${process.env.DB_REMOTE}`, {
     useNewUrlParser: true
   })
   .then(x => {
