@@ -3,14 +3,22 @@
 <div class="form-group">
 
   <form action="/" method="POST" id="form-container">
-    <label for="searchAlbum"></label>
-    <input type="text" name="search" class="form-control" id="searchAlbum" placeholder="Search...">
+    <label for="searchMusic"></label>
+    <input type="text" name="search" class="form-control" id="searchMusic" placeholder="Search your music">
     <br>
+
+    <label for="searchGenre"></label>
+    <select name="searchGenre" class="form-control" id="searchGenre" placeholder="Search the genre">
+      <option>Search genre</option>
+      {{#each genres}}
+      <option>{{this}}</option>
+      {{/each}}
+
 </div>
+<button>Buscar</button>
 
 <br><br>
 
-<button>Buscar</button>
 <br><br>
 <a href="/profile">Back to Your Profile</a>
 </form>
