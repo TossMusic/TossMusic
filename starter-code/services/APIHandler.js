@@ -1,3 +1,4 @@
+const axios = require('axios')
 class JamendoApi {
   constructor() {
     //propiedades
@@ -7,6 +8,28 @@ class JamendoApi {
   }
 
   //metodos
+  getFullAlbums() {
+    this.API.get(`albums/?client_id=${process.env.client_id}`)
+      .then(res => {
+        console.log(res.data.results)
+      })
+      .catch(err =>
+        console.log("error en getFullAlbums", err))
+  };
+
+  getFullTracks() {
+    return this.API.get(`tracks/?client_id=${process.env.client_id}`)
+      .then(res => {
+        // console.log(res.data.results)
+        return res.data.results
+      })
+      .catch(err => console.log("error en getFullTracks", err))
+  };
+
+  //   getTracksByGenre(genres) {
+  //    this.API.get(`tracks/?client_id=ae3ce9b7&tags={{genres}}`)  rock se pasaría por parametro cuando 
+  //tengamos el filtro en la plantilla del search, pasandoselo a esta función
+
 }
 
 module.exports = JamendoApi
