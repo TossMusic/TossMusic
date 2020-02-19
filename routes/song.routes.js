@@ -8,9 +8,13 @@ const JamendoApi = new JamendoApiHandler()
 router.get('/:albumId', (req, res) => {
 
     JamendoApi.getAlbumDetails(req.params.albumId)
-        .then(songFound =>{
-            console.log(songFound)
-            res.render('new-songs', { infoAlbum: songFound })})
+        .then(songFound => {
+            console.log(songFound,)
+            res.render('new-songs', {
+                infoAlbum: songFound,
+                tracks: tracksFound
+            })
+        })
         .catch(err => console.log("ha habido un problema al encontrar la canción", err))
 
 })
