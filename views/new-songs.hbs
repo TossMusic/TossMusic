@@ -1,10 +1,12 @@
 <div class="container">
     <div id="track-header" class="row">
         <div class="col-12 d-flex justify-content-between">
+            <img src={{infoAlbum.image}} width="100px">
+            <h1 id="track-title">{{infoAlbum.name}}</h1>
+                <h2><em>{{infoAlbum.artist_name}}</em></h2>
+
             <div class="d-flex align-items-center">
-                <p id="back-link" onclick="window.history.back()">Atras</p>
                 <br><br>
-                <h1 id="track-title">{{infoAlbum.name}}</h1>
             </div>
         </div>
     </div>
@@ -22,3 +24,4 @@
     </div>
     {{/each}}
 </div>
+                <p id="back-link" onclick="window.history.back()">Atras</p>
