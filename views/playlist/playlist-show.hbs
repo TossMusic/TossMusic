@@ -1,2 +1,19 @@
-{{!-- aquí se mostraría el detalle de la playlist clickada, mostrando el nombre y genero y canciones 
-asociadas --}}
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h2>{{playlist.name}}</h2>
+            <h6><em>{{playlist.genre}}</em></h6>
+        </div>
+    </div>
+    <div>
+        {{#each songs}}
+        <div class="col-6">
+            <p>Track: {{name}}</p>
+            <p>Artist: {{artist_name}}<p>
+
+        </div>
+        {{/each}}
+    </div>
+    <br>
+    <a href="/profile">Back to Your Profile</a>
+</div>

@@ -4,17 +4,21 @@
 <br>
 <img src="https://robohash.org/{{user._id}}.png?set=set4" alt="avatar">
 
+<br><br>
 <h3>My Playlists</h3>
-{{#each playlists}}
-{{name}} <a href="/playlist/edit/{{id}}">Edit</a>
-{{/each}}
-
-<h3>My Favorites Genres</h3>
-<a href="/profile/edit">Add my favorite genres</a>
-{{#each user.genre as |genre|}}
-{{genre}}
-{{/each}}
-<br>
+<ul>
+    {{#each playlists}}
+    <li><a href="/playlist/detail/{{id}}">{{name}}</a> - <a href="/playlist/edit/{{id}}">Edit</a></li>
+    {{/each}}
+</ul>
 <a href="/playlist">Create a new Playlist</a>
+<br>
+<h3>My Favorites Genres</h3>
+<ul>{{#each user.genre as |genre|}}
+    <li>{{genre}}</li>
+    {{/each}}
+</ul>
+<a href="/profile/edit">Add my favorite genres</a>
+<br><br>
 
 <a href="/">Página principal</a>

@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const Playlist = require('../models/Playlist.model')
+const Song = require('../models/Song.model')
 
 
 router.get('/', (req, res) => res.render('playlist/playlist-form'))
@@ -35,6 +36,7 @@ router.get("/edit/:id", (req, res) => {
 
 router.post('/edit/:id', (req, res) => {
     const playlistId = req.params.id
+
     Playlist.findByIdAndUpdate(playlistId, {
             name: req.body.name,
             genre: req.body.genre,
@@ -48,6 +50,7 @@ router.post('/edit/:id', (req, res) => {
         )
 })
 
-//Añadir delete y mostrar detail de cada playlist
+
+
 
 module.exports = router
