@@ -18,23 +18,28 @@
     <button type="submit">Buscar</button>
   </form>
 
-  <br><br>
+  <div class="container">
+    <div class="row">
+      {{#if result}}
+      {{#each result}}
+      <div class="col-3 d-flex align-items-stretch">
+        <div class="card">
+          <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h3 class="card-title">{{this.name}}</h3>
+            <h6 class="card-artist">{{this.artist_name}}</h6>
+            <h8 class="card-date"><em>{{this.releasedate}}</em></h8>
+            <br>
+            <a href="{{this.zip}}" class="btn btn-primary">Descargar Album</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
 
-  <br><br>
-
-
-  {{#if result}}
-
-  {{#each result}}
-  <div>
-    <a href="/song/{{this.id}}"><img src={{this.image}} width="150px"></a>
-    <div>{{this.name}}</div>
+      {{/if}}
+    </div>
   </div>
-  <br><br>
-  {{/each}}
+  <br>
+  <a href="/profile">Back to Your Profile</a>
 
-  {{/if}}
-
-</div>
-<br>
-<a href="/profile">Back to Your Profile</a>
+  {{!-- width="150px" --}}

@@ -58,8 +58,6 @@ class JamendoApi {
       })
       .catch(err => console.log("error en search", err))
 
-
-
   }
 }
 
