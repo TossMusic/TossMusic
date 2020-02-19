@@ -3,11 +3,12 @@
         <div class="col-12 d-flex justify-content-between">
             <div class="d-flex align-items-center">
                 <p id="back-link" onclick="window.history.back()">Atras</p>
-                <h1 id="track-title">{{result.name}}</h1>
+                <br><br>
+                <h1 id="track-title">{{infoAlbum.name}}</h1>
             </div>
         </div>
     </div>
-    {{#each infoAlbum}}
+    {{#each infoAlbum.tracks}}
     <div id="track" class="row">
         <div class="col-12 d-flex justify-content-between align-items-center">
             <p>{{name}}</p>

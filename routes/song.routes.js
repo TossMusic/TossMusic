@@ -11,6 +11,8 @@ router.get('/:albumId', (req, res) => {
         .then(songFound =>{
             console.log(songFound)
             res.render('new-songs', { infoAlbum: songFound })})
+
+            
         .catch(err => console.log("ha habido un problema al encontrar la canción", err))
 
 })
