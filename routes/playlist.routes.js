@@ -50,6 +50,25 @@ router.post('/edit/:id', (req, res) => {
         )
 })
 
+router.get("/detail/:id", (req, res) => {
+    const playlistId = req.params.id
+
+    Playlist.findById(playlistId)
+        .then(playlist => {
+            console.log(playlist)
+            Song.find({
+                _id: {
+                    $in: playlist.songs
+                }
+            }).then(songs => {
+                console.log(songs)
+                res.render("playlist/playlist-show", {
+                    playlist,
+                    songs
+                })
+            })
+        })
+})
 
 
 
