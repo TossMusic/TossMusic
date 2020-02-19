@@ -27,19 +27,20 @@ class JamendoApi {
       .catch(err => console.log("error en getFullTracks", err))
   };
 
-  search(searchText, genres) {
-    return this.API.get(`tracks/?client_id=${process.env.client_id}&tags=${genres}`)
-      .then(res => {
-        // console.log(res.data.results)
-        return res.data.results
-      })
-      .catch(err => console.log("error en search", err))
-  }
+  // search(searchText, genres) {
+  //   return this.API.get(`tracks/?client_id=${process.env.client_id}&tags=${genres}`)
+  //     .then(res => {
+  //       // console.log(res.data.results)
+  //       return res.data.results
+  //     })
+  //     .catch(err => console.log("error en search", err))
+  // }
 
-  searchQuery(query, limit = 10) {
-    return this.API.get(`tracks/?client_id=${process.env.client_id}${query}&limit=${limit}`)
+  searchAlbums(query, limit = 10) {
+    console.log(query)
+    return this.API.get(`albums/?client_id=${process.env.client_id}${query}&limit=${limit}`)
       .then(res => {
-        // console.log(res.data.results)
+        console.log(res.data.results, "resultado de busqueda de album")
         return res.data.results
       })
       .catch(err => console.log("error en search", err))
@@ -56,10 +57,18 @@ class JamendoApi {
 
   }
 
-  //   getTracksByGenre(genres) {
-  //    this.API.get(`tracks/?client_id=${process.env.client_id}&tags={{genres}}`)  rock se pasaría por parametro cuando 
-  //tengamos el filtro en la plantilla del search, pasandoselo a esta función
+  getAlbumDetails(id) {
 
+    return this.API.get(`albums/tracks?client_id=${process.env.client_id}&id=${id}`)
+      .then(res => {
+        // console.log(res.data.results[0].tracks)
+        return res.data.results[0].tracks
+      })
+      .catch(err => console.log("error en search", err))
+
+
+
+  }
 }
 
 module.exports = JamendoApi

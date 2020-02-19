@@ -12,9 +12,10 @@
 |8  |post |/playlist|Muestra la playlist creada en el profile|
 |9  |get  |/h|Muestra la página principal de la aplicación una vez logueado|
 |10 |get  |/search|Muestra dependiendo de los parámetros la información solicitada|
-|11 | post| /playlist/song/:id | Añade las canciones a la playlist creada que hemos indicado por Id (nombre de la canción, imagen, género, artista, fecha, descarga y player)|
-|12 |put  | /playlist/:id|Editar la playlist|
-|13 | delete| /playlist/:id |Borrar la playlist
-|14 | delete| /playlist/song/:id |Borrar canción|
-|15 | get   | /logout | Desconectar usuario|
+|11 | get |/song | Muestra los detalles de la canción
+|12 | post| /playlist/song/:id | Añade las canciones a la playlist creada que hemos indicado por Id (nombre de la canción, imagen, género, artista, fecha, descarga y player)|
+|13 |put  | /playlist/:id|Editar la playlist|
+|14 | delete| /playlist/:id |Borrar la playlist
+|15 | delete| /playlist/song/:id |Borrar canción|
+|16 | get   | /logout | Desconectar usuario|
 

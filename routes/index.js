@@ -23,16 +23,16 @@ router.post('/', (req, res, next) => {
   let query = "";
 
   if (req.body.search !== "") {
-    query += `&search=*${req.body.search}*`;
+    query += `&namesearch=${req.body.search}`;
   }
 
   if (req.body.searchGenre !== 'Search genre') {
     query += `&tags=${req.body.searchGenre}`;
   }
 
-  JamendoApi.searchQuery(query, 100)
+  JamendoApi.searchAlbums(query, 10)
     .then(result => {
-      console.log('SEARCHQUERY result: ', result);
+      console.log('searchAlbums result: ', result);
 
       if (result.length) {
         res.render("search-album", { genres, result })
@@ -41,6 +41,8 @@ router.post('/', (req, res, next) => {
       }
 
     })
+
+
 
 
   // JamendoApi.search(req.body.search, req.body.searchGenre)
