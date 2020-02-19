@@ -30,6 +30,7 @@ class JamendoApi {
 
   searchAlbums(query, limit = 10) {
     console.log(query)
+    console.log(`https://api.jamendo.com/v3.0/albums/?client_id=${process.env.client_id}${query}&limit=${limit}`)
     return this.API.get(`albums/?client_id=${process.env.client_id}${query}&limit=${limit}`)
       .then(res => {
         console.log(res.data.results, "resultado de busqueda de album")
