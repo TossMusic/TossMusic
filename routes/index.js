@@ -30,7 +30,7 @@ router.post('/', (req, res, next) => {
     query += `&tags=${req.body.searchGenre}`;
   }
 
-  JamendoApi.searchQuery(query, 100)
+  JamendoApi.searchQuery(query, 10)
     .then(result => {
       console.log('SEARCHQUERY result: ', result);
 

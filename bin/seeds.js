@@ -2,6 +2,7 @@
 
 // To execute this seed, run from the root of the project
 // $ node bin/seeds.js
+require('dotenv').config();
 
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
@@ -11,7 +12,7 @@ const Song = require("../models/Song.model");
 const bcryptSalt = 10;
 
 mongoose
-  .connect(`mongodb://localhost/TossMusic`, {
+  .connect(`${process.env.DB_REMOTE}`, {
     useNewUrlParser: true
   })
   .then(x => {
