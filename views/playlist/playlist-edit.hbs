@@ -1,0 +1,19 @@
+<h2>Modify your playlist</h2>
+
+<div class="form-group">
+
+    <form action="/playlist/edit/{{playlist.id}}" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="{{playlist.name}}">
+        <br>
+
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" value="{{playlist.genre}}">
+</div>
+
+<br><br>
+
+<button>Edit</button>
+<br><br>
+<a href="/profile">Back to Your Profile</a>
+</form>

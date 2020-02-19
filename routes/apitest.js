@@ -9,10 +9,6 @@ router.get("/", (req, res) => {
         .then(result => {
             res.json(result)
         })
-    /*los metodos de jamendoApi devuelven una promesa que hay
-    que resolver, cuando haya que devolverlo a la plantilla de 
-    search en vez de res.json hay que usar res.render para que 
-    se pinte en el hbs*/
 })
 
 router.get('/tracks', (req, res) => {
@@ -25,7 +21,6 @@ router.get('/tracks', (req, res) => {
         })
 
 })
-
 
 
 module.exports = router

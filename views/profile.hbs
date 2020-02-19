@@ -2,18 +2,19 @@
 
 <p>{{user.username}}</p>
 <br>
-<img src="https://robohash.org/{{user.username}}.png?set=set4" alt="avatar">
+<img src="https://robohash.org/{{user._id}}.png?set=set4" alt="avatar">
 
 <h3>My Playlists</h3>
 {{#each playlists}}
-{{name}}
+{{name}} <a href="/playlist/edit/{{id}}">Edit</a>
 {{/each}}
 
+<h3>My Favorites Genres</h3>
+<a href="/profile/edit">Add my favorite genres</a>
+{{#each user.genre as |genre|}}
+{{genre}}
+{{/each}}
 <br>
 <a href="/playlist">Create a new Playlist</a>
 
 <a href="/">Página principal</a>
-
-{{!-- se incluye el acceso a crear playlist así aunque podriamos
-incluirlo en la navbar y escoderla con un if de que solo la 
-vean si esta logueada --}}

@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
       userId: req.user.id
     })
     .then(playlists => {
-      console.log(`${playlists}`)
       res.render("profile", {
         user: req.user,
         playlists
@@ -18,5 +17,18 @@ router.get('/', (req, res) => {
     })
     .catch(err => console.log("Se produjo un error al buscar la playlist", err))
 });
+
+router.get('/edit', (req, res) => {
+  res.render('genres-profile')
+})
+
+router.post('/edit', (req, res) => {
+  let genres = Object.keys(req.body) //saca las claves de todos los checkbox marcados en el formulario
+  return User.findByIdAndUpdate(req.user.id, {
+    genre: genres
+  }).then(result => {
+    return res.redirect('/profile')
+  })
+})
 
 module.exports = router
