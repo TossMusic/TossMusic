@@ -29,9 +29,28 @@ a {
   margin:-50px -30px 50px;
 }
 
-#form-container{
+.playlist-form{
 
   margin:0 auto;
-      min-width: 160px;
-    max-width: 350px;
+  min-width: 160px;
+  max-width: 350px;
+}
+
+h1,h2{
+  margin: 60px 0;
+}
+
+button {
+  margin: 20px auto;
+  width: 30%;
+  padding: 10px 10px;
+  font-size: 20px;
+  text-align: center;
+  color:white;
+  border-radius: 5px;
+  background-color: deeppink;
+}
+
+.button-playlist{
+  background-color: deeppink;
 }
