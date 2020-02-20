@@ -3,7 +3,9 @@ const router = express.Router()
 
 const Playlist = require('../models/Playlist.model')
 const Song = require('../models/Song.model')
+const JamendoApiHandler = require('../services/APIHandler')
 
+const JamendoApi = new JamendoApiHandler()
 
 router.get('/', (req, res) => {
     res.render('playlist/playlist-form', {
@@ -62,17 +64,24 @@ router.get("/detail/:id", (req, res) => {
         .then(playlist => {
             console.log(playlist)
             Song.find({
-                _id: {
-                    $in: playlist.songs
-                }
-            }).then(songs => {
-                console.log(songs)
-                res.render("playlist/playlist-show", {
-                    playlist,
-                    user: req.user,
-                    songs
+                    _id: {
+                        $in: playlist.songs
+                    }
                 })
-            })
+                .then(songs => {
+                    console.log(songs)
+                    res.render("playlist/playlist-show", {
+                        playlist,
+                        user: req.user,
+                        songs
+                    })
+                })
+                .catch(err => {
+                    console.log("hubo un error al mostrar las canciones", err)
+                })
+        })
+        .catch(err => {
+            console.log("error al buscar en la BBDD de playlist", err)
         })
 })
 

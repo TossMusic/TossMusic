@@ -6,12 +6,9 @@ const JamendoApi = new JamendoApiHandler()
 
 const genres = ["lounge", "classical", "electronic", "jazz", "pop", "hiphop", "relaxation", "rock", "songwriter", "world", "metal", "soundtrack"];
 
-/* GET home page */
 router.get('/', (req, res, next) => {
 
-  console.log('EL REQ PUNTO QUERY ILLOO', req.query);
-
-  if (req.user === undefined) {
+  if (!req.user) {
     res.render('index');
   } else {
     res.render("search-album", {
@@ -21,7 +18,7 @@ router.get('/', (req, res, next) => {
     })
   }
 
-});
+})
 
 router.post('/', (req, res, next) => {
 
