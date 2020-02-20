@@ -51,6 +51,9 @@ router.post('/', (req, res, next) => {
       }
 
     })
+    .catch(err => {
+      console.log("error al traer los albums de la api", err)
+    })
 })
 
 module.exports = router;
