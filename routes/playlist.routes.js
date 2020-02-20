@@ -5,7 +5,11 @@ const Playlist = require('../models/Playlist.model')
 const Song = require('../models/Song.model')
 
 
-router.get('/', (req, res) => res.render('playlist/playlist-form'))
+router.get('/', (req, res) => {
+    res.render('playlist/playlist-form', {
+        user: req.user
+    })
+})
 router.post('/', (req, res) => {
 
     const {
@@ -28,7 +32,8 @@ router.get("/edit/:id", (req, res) => {
     Playlist.findById(playlistId)
         .then(playlist => {
             res.render("playlist/playlist-edit", {
-                playlist
+                playlist,
+                user: req.user
             })
         })
         .catch(err => console.log("no se puede editar la playlist"))
@@ -64,6 +69,7 @@ router.get("/detail/:id", (req, res) => {
                 console.log(songs)
                 res.render("playlist/playlist-show", {
                     playlist,
+                    user: req.user,
                     songs
                 })
             })
