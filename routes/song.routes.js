@@ -12,8 +12,6 @@ router.get('/:albumId', (req, res) => {
                 infoAlbum: songFound
             })
         })
-
-
         .catch(err => console.log("ha habido un problema al encontrar la canción", err))
 
 })

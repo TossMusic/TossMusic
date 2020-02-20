@@ -11,7 +11,10 @@ router.get('/', (req, res, next) => {
   if (req.user === undefined) {
     res.render('index');
   } else {
-    res.render("search-album", { genres, result: null })
+    res.render("search-album", {
+      genres,
+      result: null
+    })
   }
 
 });
@@ -30,14 +33,20 @@ router.post('/', (req, res, next) => {
     query += `&tags=${req.body.searchGenre}`;
   }
 
-  JamendoApi.searchAlbums(query, 10)
+  JamendoApi.searchAlbums(query, 12)
     .then(result => {
       console.log('searchAlbums result: ', result);
 
       if (result.length) {
-        res.render("search-album", { genres, result })
+        res.render("search-album", {
+          genres,
+          result
+        })
       } else {
-        res.render("search-album", { genres, result: null })
+        res.render("search-album", {
+          genres,
+          result: null
+        })
       }
 
     })

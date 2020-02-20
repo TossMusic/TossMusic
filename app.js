@@ -32,11 +32,7 @@ app.use('/profile', profile);
 const playlistRoutes = require('./routes/playlist.routes');
 app.use('/playlist', playlistRoutes);
 
-const songs= require('./routes/song.routes');
+const songs = require('./routes/song.routes');
 app.use('/song', songs)
-
-const apitest = require('./routes/apitest');
-app.use('/apitest', apitest);
-
 
 module.exports = app;

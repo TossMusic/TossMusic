@@ -1,16 +1,17 @@
 <div class="container">
     <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            <h2>{{playlist.name}}</h2>
-            <h6><em>{{playlist.genre}}</em></h6>
+        <div class="col-12 d-flex justify-content-center" id="playlist-detail">
+            <div class="d-flex align-items-center">
+                <h2>{{playlist.name}}</h2>
+                <h6><em>{{playlist.genre}}</em></h6>
+            </div>
         </div>
     </div>
-    <div>
+    <div id="track-detail" class="row">
         {{#each songs}}
-        <div class="col-6">
-            <p>Track: {{name}}</p>
-            <p>Artist: {{artist_name}}<p>
-                    <p>Duration: {{duration}}</p>
+        <div class="col-8 d-flex justify-content-between align-items-center">
+            <p>{{name}}</p>
+            <p class="artist"> Artista: {{artist_name}}<p>
                     <audio controls>
                         <source src="{{audio}}">
                     </audio>
@@ -18,6 +19,6 @@
         </div>
         {{/each}}
     </div>
-    <br>
-    <a href="/profile">Back to Your Profile</a>
+    <br><br>
+    <p id="back-link" onclick="window.history.back()">Volver a Profile</p>
 </div>
