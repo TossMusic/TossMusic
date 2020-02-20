@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 40px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -11,6 +11,8 @@ a {
   border-bottom: 3px black solid;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  
 }
 
 .card{
@@ -23,5 +25,12 @@ a {
 }
 
 .navbar{
-  
+  margin:-50px -30px 50px;
+}
+
+#form-container{
+
+  margin:0 auto;
+      min-width: 160px;
+    max-width: 350px;
 }

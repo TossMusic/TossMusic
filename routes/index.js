@@ -8,6 +8,9 @@ const genres = ["lounge", "classical", "electronic", "jazz", "pop", "hiphop", "r
 
 /* GET home page */
 router.get('/', (req, res, next) => {
+
+  console.log('EL REQ PUNTO QUERY ILLOO', req.query);
+
   if (req.user === undefined) {
     res.render('index');
   } else {
