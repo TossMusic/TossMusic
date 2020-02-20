@@ -16,6 +16,7 @@ router.get('/', (req, res, next) => {
   } else {
     res.render("search-album", {
       genres,
+      user: req.user,
       result: null
     })
   }
@@ -41,11 +42,13 @@ router.post('/', (req, res, next) => {
       if (result.length) {
         res.render("search-album", {
           genres,
+          user: req.user,
           result
         })
       } else {
         res.render("search-album", {
           genres,
+          user: req.user,
           result: null
         })
       }

@@ -19,7 +19,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/edit', (req, res) => {
-  res.render('genres-profile')
+  res.render('genres-profile', {
+    user: req.user
+  })
 })
 
 router.post('/edit', (req, res) => {
