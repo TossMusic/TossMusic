@@ -7,13 +7,16 @@ a {
   color: #00B7FF;
 }
 
-.navPrincipal{
+.main-nav{
   border-bottom: 3px black solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
+
+  .logo {
+    width: 50px;
+  } 
 }
 
 .card{
@@ -21,15 +24,11 @@ a {
   margin-bottom: 1em;
 }
 
-.logoPrinc{
-  width: 50px;
-}
-
 .navbar{
   margin:-50px -30px 50px;
 }
 
-.playlist-form{
+.toss-form{
 
   margin:0 auto;
   min-width: 160px;
@@ -40,17 +39,22 @@ h1,h2{
   margin: 60px 0;
 }
 
-button {
+.button-toss {
   margin: 20px auto;
-  width: 30%;
+  width: 20%;
   padding: 10px 10px;
   font-size: 20px;
+  display: block;
   text-align: center;
   color:white;
   border-radius: 5px;
-  background-color: deeppink;
 }
 
 .button-playlist{
   background-color: deeppink;
 }
+
+.searchAlbum-buttom{
+  background-color: rgb(36, 216, 219);
+}
+
