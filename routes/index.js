@@ -54,29 +54,9 @@ router.post('/', (req, res, next) => {
       }
 
     })
-<<<<<<< HEAD
-
-
-
-
-  // JamendoApi.search(req.body.search, req.body.searchGenre)
-  //   .then(result => {
-  //     // console.log('result search', result);
-  //     if (result.length) {
-  //       res.render("search-album", { genres, result })
-  //     } else {
-  //       res.render("search-album", { genres, result: null })
-  //     }
-  //   })
-
-  // JamendoApi.getFullAlbums()
-  //   .then(result)
-});
-=======
     .catch(err => {
       console.log("error al traer los albums de la api", err)
     })
 })
->>>>>>> b879b8e231dab6bdaa1a7d6106a52a9beac74302
 
 module.exports = router;
