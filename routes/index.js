@@ -23,8 +23,6 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-  //console.log('ENTRO EN POST DE INDEX');
-  //console.log(req.body);
 
   let query = "";
 
