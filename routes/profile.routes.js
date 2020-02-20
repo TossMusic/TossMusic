@@ -26,11 +26,12 @@ router.get('/edit', (req, res) => {
 
 router.post('/edit', (req, res) => {
   let genres = Object.keys(req.body) //saca las claves de todos los checkbox marcados en el formulario
-  return User.findByIdAndUpdate(req.user.id, {
-    genre: genres
-  }).then(result => {
-    return res.redirect('/profile')
-  })
+  User.findByIdAndUpdate(req.user.id, {
+      genre: genres
+    })
+    .then(result => {
+      res.redirect('/profile')
+    })
 })
 
 module.exports = router
