@@ -61,7 +61,7 @@ class JamendoApi {
       .then(res => {
         return res.data.results[0]
       })
-      .catch(err => console.log("error en el track detail"))
+      .catch(err => console.log("error en el track detail", err))
   }
 
 }

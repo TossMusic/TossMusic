@@ -85,4 +85,49 @@ router.get("/detail/:id", (req, res) => {
         })
 })
 
+router.post("/add-song", (req, res) => {
+    const playlistId = req.body.playlistId
+    const songId = req.body.songId
+
+    Playlist.findById(playlistId)
+        .then(playlist => {
+            JamendoApi.getTrackDetail(songId)
+                .then(songApi => Song.create(songApi))
+                .then(song => {
+                    playlist.songs.push(song._id)
+                    playlist.save()
+                        .then(data => {
+                            res.redirect(`/playlist/detail/${playlist._id}`)
+                        })
+                        .catch(err => {
+                            console.log("dónde no funcionaaaa", err)
+                        })
+                })
+                .catch(err => {
+                    console.log("erroooooor", err)
+                })
+                .catch(err => {
+                    console.log("venga ya", err)
+                })
+                .catch(err => {
+                    console.log("TT", err)
+                })
+        })
+        .catch(err => {
+            console.log("Hubo un error", err)
+        })
+})
+
+// router.post("/:id/delete", (req, res, next) => {
+
+//     const removeId = req.params.id
+
+//     Playlist.findByIdAndRemove(removeId)
+//         .then(() => res.redirect("/profile"))
+//         .catch(err => {
+//             console.log("Hubo un error borrando la playlist en la BBDD: ", err)
+//             next(err)
+//         })
+// })
+
 module.exports = router

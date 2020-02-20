@@ -32,6 +32,9 @@ router.post('/edit', (req, res) => {
     .then(result => {
       res.redirect('/profile')
     })
+    .catch(err => {
+      console.log("Hubo un error al guardar los géneros", err)
+    })
 })
 
 module.exports = router

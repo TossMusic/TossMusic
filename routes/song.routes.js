@@ -22,6 +22,9 @@ router.get('/:albumId', (req, res) => {
                     console.log(data)
                     res.render('new-songs', data)
                 })
+                .catch(err => {
+                    console.log("error al guardar en soundtrack", err)
+                })
         })
         .catch(err => console.log("ha habido un problema al encontrar la canción", err))
 
