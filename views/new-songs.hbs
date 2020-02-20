@@ -1,23 +1,32 @@
 <div class="container">
     <div id="track-header" class="row">
-        <div class="col-12 d-flex justify-content-between">
-            <img src={{infoAlbum.image}} width="100px">
+        <img src={{infoAlbum.image}} width="100px">
+        <div class="col-12 d-flex justify-content-center">
             <h3>{{infoAlbum.name}}</h3>
             <h6><em>{{infoAlbum.artist_name}}</em></h6>
-
-            <div class="d-flex align-items-center">
-                <br><br>
-            </div>
         </div>
     </div>
     {{#each infoAlbum.tracks}}
     <div id="track" class="row">
         <div class="col-12 d-flex justify-content-between align-items-center">
             <p>{{name}}</p>
-            <audio controls id="audio-albums">
+            <audio controls id="audio-albums" class="audio-details">
                 <source src="{{audio}}">
             </audio>
             <a href="{{audiodownload}}">Descargar</a>
+            <div>
+                <form action="/playlist/add-song" method="POST" id="form-container">
+                    <select name="playlistId" required>
+                        <option value="">---</option>
+                        {{#each ../this.playlists}}
+                        {{!-- hbs each inside an each --}}
+                        <option value="{{id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                    <input type="hidden" value="{{this.id}}" name="songId">
+                    <input type="submit" value="Añadir a playlist">
+                </form>
+            </div>
         </div>
     </div>
     {{/each}}
