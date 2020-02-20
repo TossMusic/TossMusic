@@ -36,11 +36,11 @@ a {
 }
 
 h1,h2{
-  margin: 60px 0;
+  margin: 50px 0;
 }
 
 .button-toss {
-  margin: 20px auto;
+  margin: 30px auto 60px;
   width: 20%;
   padding: 10px 10px;
   font-size: 20px;
@@ -58,3 +58,23 @@ h1,h2{
   background-color: rgb(36, 216, 219);
 }
 
+.title-page{
+  display: inline;
+  text-align: center;
+}
+
+.img-profile{
+  width: 150px;
+}
+
+.sec-prof{
+  padding:100px
+}
+
+.title-page{
+  width: 100%;
+}
+
+.sec-playlist{
+  padding: 80px
+}

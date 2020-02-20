@@ -1,4 +1,4 @@
-<h2>BUSCA TU MÚSICA</h2>
+<h2 class="title-page">BUSCA TU MÚSICA</h2>
 <div class="toss-form">
 
 
@@ -15,28 +15,17 @@
       <option value={{this}}>{{this}}</option>
       {{/each}}
     </select>
-  </form>
-  </div>
-    <button class= "button-toss searchAlbum-buttom" type="submit">Buscar</button>
+</div>
+<button class="button-toss searchAlbum-buttom" type="submit">Buscar</button>
+</form>
+</div>
+<div class="container">
+  <div class="row">
 
-  <div class="container">
-    <div class="row">
-      {{#if result}}
-      {{#each result}}
-      <div class="col-3 d-flex align-items-stretch">
-        <div class="card">
-          <a href="/song/{{this.id}}"><img class="card-img-top" src="{{this.image}}" alt="Card image cap"></a>
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h3 class="card-title">{{this.name}}</h3>
-            <h6 class="card-artist">{{this.artist_name}}</h6>
-            <h8 class="card-date"><em>{{this.releasedate}}</em></h8>
-            <br>
-            <a href="{{this.zip}}" class="btn btn-primary">Descargar Album</a>
-          </div>
-        </div>
-      </div>
-      {{/each}}
-
-      {{/if}}
-    </div>
+    {{#if result}}
+    {{#each result}}
+    {{> albumspartial this}}
+    {{/each}}
+    {{/if}}
   </div>
+</div>
