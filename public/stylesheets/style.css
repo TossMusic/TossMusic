@@ -1,6 +1,6 @@
 body {
   padding: 40px;
-  font: 14px "Poppins","Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Poppins", "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
@@ -26,7 +26,8 @@ a {
   min-width: 160px;
   max-width: 350px; }
 
-h1, h2 {
+h1,
+h2 {
   margin: 50px 0; }
 
 .button-toss {
@@ -56,6 +57,15 @@ h1, h2 {
 
 .button-block {
   display: block; }
+
+.button-index {
+  background-color: #f27a62;
+  text-decoration: none !important;
+  color: white !important; }
+
+a.hover:hover {
+  text-decoration: none;
+  color: white; }
 
 .title-page {
   display: block;
@@ -136,5 +146,58 @@ h1, h2 {
   display: block;
   margin: 0 15px 10px;
   width: 100%; }
+
+.music-play {
+  margin: 0; }
+
+.index {
+  margin: 0 38% 5em;
+  width: 50%;
+  display: block; }
+
+.first {
+  font-size: 1.5em;
+  text-align: left;
+  width: 270px;
+  margin-top: 1em;
+  padding: 20px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.second {
+  font-size: 1.5em;
+  text-align: justify;
+  width: 300px;
+  margin-top: 1em;
+  padding: 20px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.third {
+  font-size: 1.5em;
+  text-align: right;
+  width: 190;
+  margin-top: 1em;
+  padding: 20px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.first-background {
+  background-color: #7ad3f7;
+  border-radius: 5px; }
+
+.second-background {
+  background-color: #f7b04d;
+  border-radius: 5px; }
+
+.third-background {
+  background-color: #f390f0;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */

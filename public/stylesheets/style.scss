@@ -1,13 +1,13 @@
 body {
   padding: 40px;
-  font: 14px "Poppins","Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Poppins", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
 
-.main-nav{
+.main-nav {
   border-bottom: 3px black solid;
   display: flex;
   justify-content: space-between;
@@ -16,28 +16,30 @@ a {
 
   .logo {
     width: 50px;
-  } 
+  }
 }
 
-.card{
+.card {
   width: 250px;
   margin-bottom: 1em;
 }
 
-.navbar{
-  margin:-50px -30px 50px;
+.navbar {
+  margin: -50px -30px 50px;
 }
 
-.toss-form{
+.toss-form {
 
-  margin:0 auto;
+  margin: 0 auto;
   min-width: 160px;
   max-width: 350px;
 }
 
-h1,h2{
+h1,
+h2 {
   margin: 50px 0;
 }
+
 //BUTTONS
 
 .button-toss {
@@ -47,78 +49,85 @@ h1,h2{
   font-size: 20px;
   display: block;
   text-align: center;
-  color:white;
+  color: white;
   border-radius: 5px;
 }
 
-.button-playlist{
+.button-playlist {
   background-color: deeppink;
 }
 
-.searchAlbum-buttom{
+.searchAlbum-buttom {
   background-color: rgb(36, 216, 219);
 }
 
-.button-login{
+.button-login {
   background-color: coral;
 }
 
-.button-signup{
+.button-signup {
   background-color: #ed4fed;
 }
 
-.button-genre{
-  background-color:purple;
+.button-genre {
+  background-color: purple;
 }
-.button-block{
-display: block;
 
+.button-block {
+  display: block;
 }
+
+.button-index {
+  background-color: #f27a62;
+  text-decoration: none !important;
+  color: white !important;
+}
+
 //
-.title-page{
+.title-page {
   display: block;
   text-align: center;
 }
 
-.img-profile{
+.img-profile {
   width: 150px;
 }
+
 //SECTIONS
-.sec{
-   background: url(/images/profile.png);
-   background-size: cover;
-  }
-.sec-prof{
-  padding:20px 0 50px; 
+.sec {
+  background: url(/images/profile.png);
+  background-size: cover;
 }
 
-.sec-playlist{
+.sec-prof {
+  padding: 20px 0 50px;
+}
+
+.sec-playlist {
   padding: 0px 0 20px;
 }
 
-.title-page{
+.title-page {
   width: 100%;
 }
 
 .col-play-share {
   border-radius: 15px;
-  padding:0 0 200px;
-
-
+  padding: 0 0 200px;
 }
 
-.col-play{
+.col-play {
   background-color: #ffbe6d;
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
-.col-play2{
+.col-play2 {
   border: #ff7d64 solid 4px;
-  background-color:white;
+  background-color: white;
 }
 
 .play {
-color: whitesmoke;
+  color: whitesmoke;
 
 }
 
@@ -127,12 +136,12 @@ color: whitesmoke;
   text-align: center;
 }
 
-.add-genre{
+.add-genre {
   color: black;
 }
 
-#track-header{
-  margin:80px 0
+#track-header {
+  margin: 80px 0
 }
 
 .album-img {
@@ -141,6 +150,7 @@ color: whitesmoke;
 
 .title-wrapper {
   position: relative;
+
   h6 {
     position: absolute;
     top: -10px;
@@ -148,34 +158,95 @@ color: whitesmoke;
   }
 }
 
-.play-song{
+.play-song {
   align-items: center;
   margin-bottom: 20px;
+
   audio {
     width: 100%;
   }
 }
 
-#track{
+#track {
   border-radius: 5px;
   padding: 60px;
   border: #ff7d64 0.9px solid;
   margin-bottom: 30px;
 }
 
-.h2-genre{
-  margin:0 auto 50px;
+.h2-genre {
+  margin: 0 auto 50px;
   min-width: 160px;
   max-width: 450px;
 }
 
-.genre-form{
+.genre-form {
   font-size: 20px;
 }
 
 .inputList label {
   display: block;
   margin: 0 15px 10px;
-  width:100% 
+  width: 100%
 }
 
+.music-play {
+  margin: 0;
+}
+
+.index {
+  margin: 0 38% 5em;
+  width: 50%;
+  display: block;
+}
+
+.first {
+  font-size: 1.5em;
+  text-align: left;
+  width: 270px;
+  margin-top: 1em;
+  padding: 20px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second {
+  font-size: 1.5em;
+  text-align: justify;
+  width: 300px;
+  margin-top: 1em;
+  padding: 20px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.third {
+  font-size: 1.5em;
+  text-align: right;
+  width: 190;
+  margin-top: 1em;
+  padding: 20px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-background {
+  background-color: #7ad3f7;
+  border-radius: 5px;
+}
+
+.second-background {
+  background-color: #f7b04d;
+  border-radius: 5px;
+}
+
+.third-background {
+  background-color: #f390f0;
+  border-radius: 5px;
+}
