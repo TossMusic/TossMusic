@@ -1,6 +1,6 @@
 body {
   padding: 40px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Poppins","Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -38,9 +38,10 @@ a {
 h1,h2{
   margin: 50px 0;
 }
+//BUTTONS
 
 .button-toss {
-  margin: 30px auto 60px;
+  margin: 50px auto 60px;
   width: 20%;
   padding: 10px 10px;
   font-size: 20px;
@@ -58,23 +59,123 @@ h1,h2{
   background-color: rgb(36, 216, 219);
 }
 
+.button-login{
+  background-color: coral;
+}
+
+.button-signup{
+  background-color: #ed4fed;
+}
+
+.button-genre{
+  background-color:purple;
+}
+.button-block{
+display: block;
+
+}
+//
 .title-page{
-  display: inline;
+  display: block;
   text-align: center;
 }
 
 .img-profile{
   width: 150px;
 }
-
+//SECTIONS
+.sec{
+   background: url(/images/profile.png);
+   background-size: cover;
+  }
 .sec-prof{
-  padding:100px
+  padding:20px 0 50px; 
+}
+
+.sec-playlist{
+  padding: 0px 0 20px;
 }
 
 .title-page{
   width: 100%;
 }
 
-.sec-playlist{
-  padding: 80px
+.col-play-share {
+  border-radius: 15px;
+  padding:0 0 200px;
+
+
 }
+
+.col-play{
+  background-color: #ffbe6d;
+  color:whitesmoke;
+}
+
+.col-play2{
+  border: #ff7d64 solid 4px;
+  background-color:white;
+}
+
+.play {
+color: whitesmoke;
+
+}
+
+.list-deco {
+  list-style: none;
+  text-align: center;
+}
+
+.add-genre{
+  color: black;
+}
+
+#track-header{
+  margin:80px 0
+}
+
+.album-img {
+  width: 200px;
+}
+
+.title-wrapper {
+  position: relative;
+  h6 {
+    position: absolute;
+    top: -10px;
+    right: 90px;
+  }
+}
+
+.play-song{
+  align-items: center;
+  margin-bottom: 20px;
+  audio {
+    width: 100%;
+  }
+}
+
+#track{
+  border-radius: 5px;
+  padding: 60px;
+  border: #ff7d64 0.9px solid;
+  margin-bottom: 30px;
+}
+
+.h2-genre{
+  margin:0 auto 50px;
+  min-width: 160px;
+  max-width: 450px;
+}
+
+.genre-form{
+  font-size: 20px;
+}
+
+.inputList label {
+  display: block;
+  margin: 0 15px 10px;
+  width:100% 
+}
+

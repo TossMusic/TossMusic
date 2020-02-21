@@ -1,20 +1,36 @@
 <div class="container">
-    <div id="track-header" class="row">
-        <img src={{infoAlbum.image}} width="100px">
-        <div class="col-12 d-flex justify-content-center">
-            <h3>{{infoAlbum.name}}</h3>
-            <h6><em>{{infoAlbum.artist_name}}</em></h6>
+    <div id="track-header" class="row align-items-center justify-content">
+        <div class="col-5">
+            <img class="album-img" src={{infoAlbum.image}}>
+        </div>
+        <div class="col-7  justify-content-center">
+            <div class="title-wrapper">
+                <h3>{{infoAlbum.name}}</h3>
+                <h6><em>{{infoAlbum.artist_name}}</em></h6>
+            </div>
         </div>
     </div>
-    {{#each infoAlbum.tracks}}
-    <div id="track" class="row">
-        <div class="col-12 d-flex justify-content-between align-items-center">
-            <p>{{name}}</p>
-            <audio controls id="audio-albums" class="audio-details">
-                <source src="{{audio}}">
-            </audio>
-            <a href="{{audiodownload}}">Descargar</a>
-            <div>
+    <div id="track" class="row text-align-center align-items-center">
+        {{#each infoAlbum.tracks}}
+        <div class="col-2">
+            <div class="play-song">
+                <p>{{name}}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="play-song">
+                <audio controls id="audio-albums" class="audio-details">
+                    <source src="{{audio}}">
+                </audio>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="play-song">
+                <a href="{{audiodownload}}">Descargar</a>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="play-song">
                 <form action="/playlist/add-song" method="POST" id="form-container">
                     <select name="playlistId" required>
                         <option value="">---</option>
@@ -28,7 +44,7 @@
                 </form>
             </div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>
 <p id="back-link" onclick="window.history.back()">Atras</p>
