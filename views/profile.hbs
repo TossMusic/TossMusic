@@ -1,67 +1,41 @@
-
 <section class="sec sec-prof">
-<div class="container">
-    <div class="row d-flex align-items-center">
-        <div class="col-7">
-            <img class="img-profile" src="https://robohash.org/{{user._id}}.png?set=set4" alt="avatar">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-7">
+                <img class="img-profile" src="https://robohash.org/{{user._id}}.png?set=set4" alt="avatar">
+            </div>
+            <div class="col-5">
+                <h2 class="title-page">Bienvenid@ {{user.username}}</h2>
+            </div>
         </div>
-        <div class="col-5">
-            <h2 class="title-page">Bienvenid@ {{user.username}}</h2>
-        </div>
-    </div>
 </section>
 <br><br>
 <section class="sec sec-playlist">
-<div class="container">
-<div class="row d-flex play-share text-center align-items-center justify-content-between">
-
-<div class="col-play-share col-play col-5">
-<h3>Mis Playlists</h3>
-<ul class="list-deco">
-    <p class= "play">
-    {{#each playlists}}</p>
-    <li><a class= "play" href="/playlist/detail/{{id}}">{{name}}</a> - <a class= "play" href="/playlist/edit/{{id}}">Editar</a></li>
-    {{/each}}
-</ul>
-</div>
-<div class="col-play-share col-play2 col-5">
-<h3 >Mis géneros favoritos</h3>
-<ul class="list-deco">{{#each user.genre as |genre|}}
-    <li>{{genre}}</li>
-    {{/each}}
-</ul>
-<a class= "add-genre" href="/profile/edit">Añadir géneros favoritos</a>
-</div>
-</div>
-</section>
-
-
-<section class="sec-playlist">
     <div class="container">
-        <div class="row d-flex align-items-center justify-content-between">
+        <div class="row d-flex play-share text-center align-items-center justify-content-between">
 
-            <div class="col-play col-6">
+            <div class="col-play-share col-play col-5">
                 <h3>Mis Playlists</h3>
-                <ul>
-                    {{#each playlists}}
-                    <li>
-                        <a href="/playlist/detail/{{id}}">{{name}}</a> - <a href="/playlist/edit/{{id}}">Editar</a>
-                        <form action="/playlist/{{id}}/delete" method="POST">
-                            <input type="submit" value="Borrar">
-                        </form>
-                    </li>
-                    {{/each}}
+                <ul class="list-deco">
+                    <p class="play">
+                        {{#each playlists}}</p>
+                    <li><a class="play" href="/playlist/detail/{{id}}">{{name}}</a> - <a class="play"
+                            href="/playlist/edit/{{id}}">Editar</a></li>
+                    <form action="/playlist/{{id}}/delete" method="POST">
+                        <input type="submit" value="Borrar">
+                        {{/each}}
                 </ul>
             </div>
-            <div class="col-play col-6">
+            <div class="col-play-share col-play2 col-5">
                 <h3>Mis géneros favoritos</h3>
-                <ul>{{#each user.genre as |genre|}}
+                <ul class="list-deco">{{#each user.genre as |genre|}}
                     <li>{{genre}}</li>
                     {{/each}}
                 </ul>
-                <a href="/profile/edit">Añadir géneros favoritos</a>
+                <a class="add-genre" href="/profile/edit">Añadir géneros favoritos</a>
             </div>
         </div>
 </section>
+
 
 <a href="/">Página principal</a>
