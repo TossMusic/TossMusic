@@ -29,6 +29,9 @@ a {
 h1, h2 {
   margin: 50px 0; }
 
+h3 {
+  margin: 17px 0 30px; }
+
 .button-toss {
   margin: 50px auto 60px;
   width: 20%;
@@ -57,12 +60,33 @@ h1, h2 {
 .button-block {
   display: block; }
 
+#button-delete {
+  font-size: 12px;
+  padding: 5px 10px;
+  color: #e99f44;
+  border: coral;
+  border-radius: 5px;
+  margin: 5px 0 10px; }
+
 .title-page {
   display: block;
-  text-align: center; }
+  text-align: center;
+  width: 100%;
+  font-size: 3em; }
 
 .img-profile {
-  width: 150px; }
+  display: block;
+  text-align: center;
+  width: 100%; }
+
+.square-profile {
+  overflow: hidden;
+  border: #24d8db solid 1px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 20vw;
+  height: 20vw;
+  margin: 0 auto; }
 
 .sec {
   background: url(/images/profile.png);
@@ -74,15 +98,12 @@ h1, h2 {
 .sec-playlist {
   padding: 0px 0 20px; }
 
-.title-page {
-  width: 100%; }
-
 .col-play-share {
   border-radius: 15px;
   padding: 0 0 200px; }
 
 .col-play {
-  background-color: #ffbe6d;
+  background-color: #fbbc6e;
   color: whitesmoke; }
 
 .col-play2 {
@@ -90,11 +111,13 @@ h1, h2 {
   background-color: white; }
 
 .play {
-  color: whitesmoke; }
+  color: whitesmoke;
+  size: 2em; }
 
 .list-deco {
   list-style: none;
-  text-align: center; }
+  text-align: center;
+  padding: 0 !important; }
 
 .add-genre {
   color: black; }
@@ -136,5 +159,9 @@ h1, h2 {
   display: block;
   margin: 0 15px 10px;
   width: 100%; }
+
+.music-play {
+  margin: 0px;
+  font-size: 16px; }
 
 /*# sourceMappingURL=style.css.map */

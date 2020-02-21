@@ -38,6 +38,10 @@ a {
 h1,h2{
   margin: 50px 0;
 }
+
+h3{
+  margin: 17px 0 30px
+}
 //BUTTONS
 
 .button-toss {
@@ -72,17 +76,43 @@ h1,h2{
 }
 .button-block{
 display: block;
+}
 
+#button-delete{
+  font-size: 12px;
+  padding: 5px 10px;
+  color: #e99f44;
+  border: coral;
+  border-radius: 5px;
+  margin: 5px 0 10px;
 }
 //
 .title-page{
   display: block;
   text-align: center;
+  width: 100%;
+  font-size: 3em;
 }
 
 .img-profile{
-  width: 150px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  
 }
+
+.square-profile{
+  overflow: hidden;
+  border: rgb(36, 216, 219) solid 1px;
+  border-radius: 10px;
+  padding: 20px;
+   width: 20vw;
+   height: 20vw;
+   margin: 0 auto;
+   
+}
+
+
 //SECTIONS
 .sec{
    background: url(/images/profile.png);
@@ -96,19 +126,14 @@ display: block;
   padding: 0px 0 20px;
 }
 
-.title-page{
-  width: 100%;
-}
 
 .col-play-share {
   border-radius: 15px;
   padding:0 0 200px;
-
-
 }
 
 .col-play{
-  background-color: #ffbe6d;
+  background-color: #fbbc6e;
   color:whitesmoke;
 }
 
@@ -119,12 +144,13 @@ display: block;
 
 .play {
 color: whitesmoke;
-
+size: 2em
 }
 
 .list-deco {
   list-style: none;
   text-align: center;
+  padding: 0 !important ;
 }
 
 .add-genre{
@@ -179,3 +205,7 @@ color: whitesmoke;
   width:100% 
 }
 
+.music-play{
+  margin: 0px;
+  font-size: 16px;
+}
