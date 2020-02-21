@@ -118,16 +118,16 @@ router.post("/add-song", (req, res) => {
         })
 })
 
-// router.post("/:id/delete", (req, res, next) => {
+router.post("/:id/delete", (req, res, next) => {
 
-//     const removeId = req.params.id
+    const removeId = req.params.id
 
-//     Playlist.findByIdAndRemove(removeId)
-//         .then(() => res.redirect("/profile"))
-//         .catch(err => {
-//             console.log("Hubo un error borrando la playlist en la BBDD: ", err)
-//             next(err)
-//         })
-// })
+    Playlist.findByIdAndRemove(removeId)
+        .then(() => res.redirect("/profile"))
+        .catch(err => {
+            console.log("Hubo un error borrando la playlist en la BBDD: ", err)
+            next(err)
+        })
+})
 
 module.exports = router
