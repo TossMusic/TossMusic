@@ -39,8 +39,7 @@ h3 {
   display: block;
   text-align: center;
   color: white;
-  border-radius: 5px; 
-}
+  border-radius: 5px; }
 
 .button-playlist {
   background-color: deeppink; }
@@ -67,12 +66,11 @@ h3 {
   border: coral;
   border-radius: 5px;
   margin: 5px 0 10px; }
-   .button-index {
 
-    background-color: #f27a62;
-    text-decoration: none !important;
-     color: white;
-   }
+.button-index {
+  background-color: #f27a62;
+  text-decoration: none !important;
+  color: white !important; }
 
 .title-page {
   display: block;
